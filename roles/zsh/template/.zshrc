@@ -4,6 +4,7 @@
 alias py="python3"
 alias df="df -h"
 alias x="xclip -selection clipboard"
+alias gitme="git add . && git commit -m $(date +%s) && git push"
 
 # Current shell
 export SHELL=/usr/bin/zsh
