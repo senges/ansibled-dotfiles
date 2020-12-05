@@ -1,0 +1,14 @@
+---
+- name: Install common pip packages
+  pip:
+    name: 
+     - requests
+     - Pillow
+     - Flask
+    extra_args: --user
+
+# - name: Create application cache directory
+#   file:
+#     path: "/home/{{ ansible_user_id }}/.local/cache"
+#     state: directory
+#     mode: '0755'

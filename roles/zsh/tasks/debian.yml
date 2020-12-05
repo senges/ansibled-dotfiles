@@ -1,0 +1,21 @@
+---
+- name: install zsh
+  become: yes
+  apt:
+    name: zsh
+    state: present
+
+- name: install oh-my-zsh
+  command: 'sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"'
+
+- name: set zsh as default shell for root
+  become: yes
+  user:
+    name: 'root'
+    shell: /bin/zsh
+
+- name: set zsh as default shell for current user
+  become: yes
+  user:
+    name: '{{ ansible_user_id }}'
+    shell: /bin/zsh

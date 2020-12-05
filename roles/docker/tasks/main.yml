@@ -1,0 +1,6 @@
+---
+- include_tasks: arch.yml
+  when: ansible_distribution == "Archlinux"
+
+- include_tasks: debian.yml
+  when: ansible_distribution == "debian"

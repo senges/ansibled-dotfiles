@@ -1,0 +1,6 @@
+---
+- name: Create application cache directory
+  file:
+    path: "/home/{{ ansible_user_id }}/.zshrc.d"
+    state: directory
+    mode: '0755'

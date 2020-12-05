@@ -1,0 +1,14 @@
+- name: update pacman repo (pacman -Syu)
+  become: yes
+  community.general.pacman:
+    update_cache: yes
+    upgrade: yes
+
+- name: Install common packages
+  become: yes
+  community.general.pacman:
+    name:
+      - curl
+      - wget
+      - 
+    state: present

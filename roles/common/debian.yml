@@ -1,0 +1,25 @@
+---
+- name: update repository
+  apt:
+    upgrade: yes
+    update_cache: yes
+
+- name: Install common packages
+  become: yes
+  apt:
+    name:
+      - curl
+      - wget
+      - gcc
+      - git
+      - nc
+      - telnet
+      - unzip
+      - tree
+      - python3
+      - python3-pip
+      - openvpn
+      - sqlite3
+      - htop
+
+    state: latest

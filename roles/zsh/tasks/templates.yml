@@ -1,0 +1,11 @@
+---
+- name: Copy '{{ item }}' zsh config
+  copy:
+    src: "{{ item }}.zshrc"
+    dest: "{{ zshrc.d }}"
+  when: "'{{ item }}' in role_names"
+  with_items:
+   - docker
+   - kubernetes
+   - terraform
+   - thefuck

@@ -1,0 +1,2 @@
+---
+zshrc.d: "/home/{{ ansible_user_id }}/.zshrc.d"

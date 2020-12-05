@@ -1,0 +1,18 @@
+---
+- name: install docker
+  become: yes
+  community.general.pacman:
+    name: docker
+    state: present
+
+- name: Enable docker
+  become: yes
+  service:
+      name: docker
+      enabled: yes
+
+- name: Restart Docker
+  become: yes
+  service: 
+    name: docker 
+    state: restarted

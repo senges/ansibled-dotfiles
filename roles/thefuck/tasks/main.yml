@@ -1,0 +1,13 @@
+---
+- name: Install thefuck pip packages
+  pip:
+    name: 
+     - thefuck
+    extra_args: --user
+
+- name: Copy '{{ item }}' thefuck custom rule
+  copy:
+    src: "{{ item }}.py"
+    dest: "{{ rule.d }}"
+  with_items:
+   - cat
