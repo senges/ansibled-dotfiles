@@ -1,3 +1,3 @@
-# My dotefiles manages with ansible
+# My dotfiles managed with ansible
 
 .. and that's it
